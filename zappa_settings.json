@@ -1,0 +1,9 @@
+{
+    "dev": {
+        "profile_name": "",
+        "aws_region": "us-west-2",
+        "app_function": "my_app.app",
+        "s3_bucket": "",
+        "keep_warm": false
+    }
+}

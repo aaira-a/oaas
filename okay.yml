@@ -1,0 +1,47 @@
+swagger: '2.0'
+info:
+  description: Okay as a Service
+  version: 1.0.0
+  title: Okay as a Service
+  contact:
+    email: azamalias@gmail.com
+  license:
+    name: MIT
+host: myhost
+basePath: /api
+tags:
+  - name: okay
+    description: Returns okay string
+schemes:
+  - https
+paths:
+  /okay:
+    post:
+      summary: Are you okay?
+      consumes:
+        - application/json
+      produces:
+        - text/html
+      parameters:
+        - in: body
+          name: body
+          description: body of the payload
+          schema:
+            type: object
+            properties:
+              count:
+                type: integer
+                description: count of okay
+              sleep:
+                type: integer
+                description: delay in seconds
+      responses:
+        '200':
+          description: Okay
+          schema:
+            type: object
+            properties:
+              response:
+                type: string
+        '405':
+          description: Invalid input
