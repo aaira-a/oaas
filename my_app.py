@@ -15,7 +15,7 @@ def okay():
         if 'count' in inputs:
             count = inputs['count']
 
-        if 'sleep':
+        if 'sleep' in inputs:
             sleep = inputs['sleep']
 
     except:
@@ -23,7 +23,7 @@ def okay():
 
     time.sleep(sleep)
 
-    return jsonify({'message':'okay ' * count})
+    return jsonify({'message': ('okay ' * count).strip()})
 
 
 if __name__ == '__main__':
