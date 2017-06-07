@@ -21,7 +21,7 @@ paths:
       consumes:
         - application/json
       produces:
-        - text/html
+        - application/json
       parameters:
         - in: body
           name: body
@@ -41,7 +41,7 @@ paths:
           schema:
             type: object
             properties:
-              response:
+              message:
                 type: string
         '405':
           description: Invalid input

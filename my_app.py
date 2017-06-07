@@ -1,7 +1,6 @@
 import time
 
-from flask import Flask
-from flask import request
+from flask import jsonify, Flask, request
 
 app = Flask(__name__)
 
@@ -24,7 +23,7 @@ def okay():
 
     time.sleep(sleep)
 
-    return ('okay ' * count)
+    return jsonify({'message':'okay ' * count})
 
 
 if __name__ == '__main__':
